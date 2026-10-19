@@ -375,7 +375,7 @@ function App() {
     setShadowLoading(true)
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/extract/linux-shadow', {
+      const response = await fetch('`${API_BASE_URL}/extract/linux-shadow`', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({ content: shadowInput }),
@@ -419,7 +419,7 @@ function App() {
       const formData = new FormData()
       formData.append('file', windowsFile)
 
-      const response = await fetch('http://127.0.0.1:8000/analyze/windows-artifact', {
+      const response = await fetch('`${API_BASE_URL}/analyze/windows-artifact`', {
         method: 'POST',
         body: formData,
       })
