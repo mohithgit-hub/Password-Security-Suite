@@ -21,6 +21,7 @@ app.add_middleware(
         "http://localhost:5176",
         "http://127.0.0.1:5176",
         "https://password-security-suite-tau.vercel.app",
+        "https://password-security-suite-git-main-certified-tester.vercel.app",
     ],
     allow_credentials=False,
     allow_methods=["*"],
